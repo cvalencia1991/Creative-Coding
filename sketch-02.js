@@ -18,7 +18,7 @@ const sketch = () => {
     context.fillStyle = 'white';
     context.fillRect(0, 0, width, height);
 
-    context.fillStyle = 'blue';
+    context.fillStyle = 'black';
 
     const cx = width * 0.5;
     const cy = height* 0.5;
@@ -26,7 +26,7 @@ const sketch = () => {
     const w = width * 0.01;
     const h = height * 0.1;
 
-    const num = 40;
+    const num = 30;
     const radius = width * 0.3;
 
     for (let i = 0; i < num; i++) {
@@ -40,7 +40,7 @@ const sketch = () => {
       context.save();
       context.translate(x, y);
       context.rotate(-angle);
-      context.scale(random.range(0.1,2),random.range(0.2,0.5));
+      context.scale(random.range(0.1,1),random.range(0.2,0.5));
       context.beginPath();
       context.rect(-w * 0.5,-h*0.5,w,h);
       context.fill();
